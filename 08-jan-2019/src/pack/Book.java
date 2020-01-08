@@ -25,8 +25,10 @@ public class Book implements productinterface  {
 		// TODO Auto-generated method stub
 		return regularprice;
 	}
+	
+//	no using set methord
 
-	@Override
+	@Override   
 	public void setregularprice(double regularprice) {
 		// TODO Auto-generated method stub
 		this.regularprice = regularprice;

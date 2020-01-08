@@ -31,6 +31,7 @@ public class mp3 implements electronics {
 		return regularprice;
 	}
 
+//	no using set methord
 	@Override
 	public void setregularprice(double regularprice) {
 		// TODO Auto-generated method stub
@@ -47,7 +48,7 @@ public class mp3 implements electronics {
 		return Manufacture;
 	}
 
-
+//	no using set methord
 
 	@Override
 	public void setManufacture(String name) {

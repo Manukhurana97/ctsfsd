@@ -29,6 +29,7 @@ public class tv implements electronics {
 		return regularprice;
 	}
 
+//	no using set methord
 	@Override
 	public void setregularprice(double regularprice) {
 		// TODO Auto-generated method stub
@@ -44,7 +45,7 @@ public class tv implements electronics {
 		// TODO Auto-generated method stub
 		return Manufacture;
 	}
-
+//	no using set methord
 	@Override
 	public void setManufacture(String name) {
 		Manufacture = name;
