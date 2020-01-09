@@ -25,7 +25,7 @@ public class todoimp implements tododao	{
 
 	@Override
 	public ToDo findById(String todoid) {
-Iterator<ToDo> iterator=todolist.iterator();
+		Iterator<ToDo> iterator=todolist.iterator();
 		
 		while(iterator.hasNext())
 		{
@@ -40,11 +40,49 @@ Iterator<ToDo> iterator=todolist.iterator();
 		return td;
 	}
 
-	@Override
 	public List<ToDo> getalltodo() {
 		// TODO Auto-generated method stub
 		return todolist;
 	}
 
+	@Override
+	public void deleteToDo(String next) {
+		if(todolist.isEmpty())
+		{
+			System.out.println("todo list is empty.");
+			
+		}	
+		td=findById(next);
+		if(td==null)
+		{
+			System.out.println("no such todo to delete");
+		}
+		else
+		{
+			todolist.remove(td);
+			System.out.println("remoded sucessfully with id: "+todolist);
+		}
+		
+	}
+
+
+
+	@Override
+	public void removeAllToDo(String todoid) {
+		todolist.removeAll(todolist);
+		
+	}
+
+	@Override
+	public void updatebyid(String toDoId, String data) {
+		ToDo abc = findById(toDoId);
+		int index = todolist.indexOf(findById(toDoId));
+		abc.setTodoname(data);
+		 todolist.set(index, abc);
+		
+		
+	}
+
+	
 	
 }

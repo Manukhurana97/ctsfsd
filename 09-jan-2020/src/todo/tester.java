@@ -22,6 +22,9 @@ public class tester {
 		System.out.println("1. create todo");
 		System.out.println("2. display all todo");
 		System.out.println("3. find todo");
+		System.out.println("4. remove element");
+		System.out.println("5. remove all");
+		System.out.println("6. update todo");
 		System.out.println("0. exit");
 		System.out.print("Enter your choice: ");
 		try {
@@ -50,6 +53,26 @@ public class tester {
 				System.out.println("no such todo available");
 			}
 			break;
+			
+		case 4:
+			
+			System.out.print("provide todo Id: ");
+			test.service.deleteToDo(scanner.next());
+			break;
+		case 5:
+			test.service.removeAllToDo();
+			System.out.println("batch remove sucessfull");
+			break;
+			
+			
+		case 6:
+			System.out.println("enter task id");
+			String str  = scanner.next();
+			System.out.println("enter update");
+			String str1  = scanner.next();
+			test.service.updatebyid(str, str1);
+			break;
+			
 		case 0:
 			System.out.println("bye");
 			System.exit(0);

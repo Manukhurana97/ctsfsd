@@ -28,4 +28,27 @@ public class ToDoServiceImpl implements  ToDoService{
 		return dao.findById(toDoId);
 	}
 
+	@Override
+	public void deleteToDo(String toDoId) {
+		dao.deleteToDo(toDoId);
+		
+	}
+
+	@Override
+	public void removeAllToDo() {
+		// TODO Auto-generated method stub
+		
+		
+	}
+
+	@Override
+	public void updatebyid(String toDoId, String data) {
+		
+		// TODO Auto-generated method stub
+		 dao.updatebyid(toDoId, data);
+	}
+
+	
+	
+
 }
