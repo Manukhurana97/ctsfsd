@@ -75,8 +75,8 @@ public class todoimp implements tododao	{
 
 	@Override
 	public void updatebyid(String toDoId, String data) {
-		ToDo abc = findById(toDoId);
-		int index = todolist.indexOf(findById(toDoId));
+		ToDo abc = findById(toDoId);  // getting object
+		int index = todolist.indexOf(findById(toDoId)); // geting index
 		abc.setTodoname(data);
 		 todolist.set(index, abc);
 		
