@@ -3,6 +3,7 @@ package com.jdbc;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class tester {
@@ -35,6 +36,17 @@ public class tester {
 				break;
 			case 2:
 				System.out.println("displaying all data");
+				ResultSet rs = (ResultSet) service.displayall();
+				while(rs.next())
+				{
+					System.out.println(rs.getString("name")+rs.getString("email"));
+				}
+//			case 3:
+//				System.out.println("Enter User name");
+//				String Stname = br.readLine();
+//				
+				
+				
 				
 			case 0:
 				System.exit(0);

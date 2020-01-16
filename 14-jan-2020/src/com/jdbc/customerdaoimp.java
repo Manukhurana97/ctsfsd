@@ -3,10 +3,13 @@ package com.jdbc;
 import java.io.IOException;	
 import java.sql.*;
 
+import com.mysql.cj.protocol.Resultset;
+
 public class customerdaoimp implements customerdao {
 	private customer cus;
 	private Connection con;
 	private PreparedStatement ps;
+	private ResultSet rs;
 	private Myconnection mycon;
 	
 	{
@@ -28,6 +31,22 @@ public class customerdaoimp implements customerdao {
 		ps.executeUpdate();
 		return cus;
 	}
+
+
+	@Override
+	public ResultSet displayall() throws SQLException {
+		ps = con.prepareStatement("select name, email from monapato");
+		rs = ps.executeQuery();
+		
+		return rs;
+	}
+
+//
+//	@Override
+//	public ResultSet findUser() throws SQLException {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 	
 
 }
