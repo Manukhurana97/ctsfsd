@@ -1,3 +1,4 @@
+// main class
 package com.mycompany.jdbcMaven;
 
 import java.io.BufferedReader;
@@ -49,10 +50,13 @@ public class Tester {
 				String cm=br.readLine();
 				
 				String cid = UUID.randomUUID().toString();
+				
+				System.out.print(" stock: ");
+				int cstock=br.read();
 			
 				try 
 				{
-					car cr = crs.insertdata(cn, cp, cm, cid);
+					car cr = crs.insertdata(cn, cp, cm, cid, cstock);
 				} catch (Exception e) {
 					// TODO: handle exception
 					
@@ -111,10 +115,11 @@ public class Tester {
 				System.out.print(" model: ");
 				String cm1=br.readLine();
 				
+				System.out.print(" stock: ");
+				int cstock1 = br.read();
 				
 				
-				
-				crs.updatebyid(id2,cn1, cp1, cm1);
+				crs.updatebyid(id2,cn1, cp1, cm1, cstock1);
 				break;
 				
 			case 0:

@@ -12,11 +12,11 @@ public class carserviceimp implements carservice {
 	}
 
 	@Override
-	public car insertdata(String name, String price, String model, String cid) throws SQLException {
+	public car insertdata(String name, String price, String model, String cid, int stock) throws SQLException {
 		car cr=null;
 		System.out.println("ok");
 		try {
-			cr= dao.insertdata(name, price, model, cid);
+			cr= dao.insertdata(name, price, model, cid, stock);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -43,8 +43,8 @@ public class carserviceimp implements carservice {
 	}
 
 	@Override
-	public void updatebyid(String id , String name, String price, String model) throws SQLException {
-		dao.updatebyid(id, name, price, model);
+	public void updatebyid(String id , String name, String price, String model, int stock) throws SQLException {
+		dao.updatebyid(id, name, price, model, stock);
 		
 	}
 
