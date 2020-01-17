@@ -7,12 +7,22 @@
 		<constructor-arg name="lane" value="abc"></constructor-arg>
 		<constructor-arg name="Street" value="whitefield"></constructor-arg>
 		<constructor-arg name="city" value="banglore"></constructor-arg>
+		
+		<property name="lane" value="abc1"></property>
+		<property name="street" value="hoody"></property>
+		<property name="city" value="banglore"></property>
+		
+		
 	</bean>
 	
 	<bean id="employee" class="com.mycompany.Springproject.bean.Employee">
+			
 		<constructor-arg name="empid" value="12341234"></constructor-arg>
 		<constructor-arg name="empname" value="manu"></constructor-arg>
 		<constructor-arg name="add" ref="address"></constructor-arg>
+		
+		
+		
 		
 	</bean>
 

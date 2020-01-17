@@ -5,6 +5,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.mycompany.Springproject.bean.Employee;
 
+/**
+ * @author Alchemy
+ *
+ */
 public class App 
 {
     public static void main( String[] args )
