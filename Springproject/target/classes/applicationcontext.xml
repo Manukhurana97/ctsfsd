@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="address" class="com.mycompany.Springproject.bean.address">
+		<constructor-arg name="lane" value="abc"></constructor-arg>
+		<constructor-arg name="Street" value="whitefield"></constructor-arg>
+		<constructor-arg name="city" value="banglore"></constructor-arg>
+	</bean>
+	
+	<bean id="employee" class="com.mycompany.Springproject.bean.Employee">
+		<constructor-arg name="empid" value="12341234"></constructor-arg>
+		<constructor-arg name="empname" value="manu"></constructor-arg>
+		<constructor-arg name="add" ref="address"></constructor-arg>
+		
+	</bean>
+
+
+
+</beans>
+
+
+

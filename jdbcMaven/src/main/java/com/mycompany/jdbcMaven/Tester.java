@@ -1,4 +1,3 @@
-// main class
 package com.mycompany.jdbcMaven;
 
 import java.io.BufferedReader;
@@ -135,4 +134,3 @@ public class Tester {
 	}
 
 }
-

@@ -16,9 +16,9 @@ public class cardaoimp implements cardao {
 		
 		try {
 			mycon = MYconnection.getobj();
-			System.out.println(mycon);
+			
 			con = mycon.getconn();
-			System.out.println(con);
+			
 			
 		}
 		catch(Exception e) {
@@ -33,7 +33,6 @@ public class cardaoimp implements cardao {
 	public car insertdata(String name, String price, String model, String cid, int stock) throws SQLException {
 		
 		cr = new car(name, price, model, cid, stock);
-		System.out.println(cr);
 		String query = "insert into car(name, price, model,carid, stock) values (?,?,?,?,?)";
 		ps = con.prepareStatement(query);
 		ps.setString(1, cr.getName());

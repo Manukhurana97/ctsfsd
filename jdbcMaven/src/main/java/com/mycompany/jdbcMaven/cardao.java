@@ -3,7 +3,7 @@ package com.mycompany.jdbcMaven;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
-//
+
 public interface cardao {
 	
 	 car insertdata(String name, String price, String model, String cid, int stock) throws SQLException;
