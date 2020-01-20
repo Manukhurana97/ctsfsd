@@ -10,5 +10,7 @@ public interface CustomerService {
 	public  Customer insertdata(Customer cmr)throws SQLException;
 	public List<Customer> getAllCustomers()throws SQLException; 
 	public List<Customer> getCustomerById(String uId) throws SQLException;
+	
+
 
 }

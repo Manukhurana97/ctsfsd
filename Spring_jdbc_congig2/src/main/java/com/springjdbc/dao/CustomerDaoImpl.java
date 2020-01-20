@@ -11,7 +11,7 @@ import com.springjdbc.model.Customer;
 import com.springjdbc.model.CustomerRowMapper;
 
 @Component("dao")
-public  class CustomerDaoImpl implements Customerdao2 {
+public class CustomerDaoImpl implements Customerdao2 {
 	
 	private JdbcTemplate jdbctemp;
 	
@@ -42,13 +42,12 @@ public  class CustomerDaoImpl implements Customerdao2 {
 		
 		return jdbctemp.query(query, new Object[] {uId},new CustomerRowMapper());
 	}
-
 	
-
-	
-
-	
-	
-
+	@Override
+	public int deletebyid(String uId) {
+		String query = "delete from cusomerjdbc where email=? ";
+		int i = jdbctemp.update(query, uId);
+		return i;
+	}
 
 }

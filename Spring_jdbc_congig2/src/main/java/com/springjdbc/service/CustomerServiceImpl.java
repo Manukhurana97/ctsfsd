@@ -43,6 +43,11 @@ private Customerdao2 dao;
 	}
 
 
+	@Override
+	public int deletebyid(String uId) {
+		// TODO Auto-generated method stub
+		return dao.deletebyid(uId);
+	}
 	
 
 }

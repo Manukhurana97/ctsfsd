@@ -14,5 +14,5 @@ public interface Customerdao2 {
 	
 	public List<Customer> getCustomerById(String uId) throws SQLException;
 	
-	
+	public int deletebyid(String uId) ;
 }
