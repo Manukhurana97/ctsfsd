@@ -19,15 +19,17 @@ public class Customerdisplayddata extends HttpServlet {
     
 	 Customerdao service;
 	    
-	    public void init()
-	    {
-	    	service = new Customerdaoimpl();
-	    }
+//	    public void init()
+//	    {
+//	    	service = new Customerdaoimpl();
+//	    }
 	    
    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		List<Customer> customers=service.displayall();
+		service = new Customerdaoimpl();
+		List<Customer> customers = null;
+		customers=service.displayall();
 		request.setAttribute("display", customers);
 		
 		RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
