@@ -1,0 +1,2 @@
+spring:  mvc:    view:      suffix: /WEB-INF/view/      prefix: .jsp      #  h2:#    console:#      enabled: true            datasource:    url: jdbc:mysql://localhost:3306/demo    username: root    password: manu2462      jpa:    hibernate.ddl-auto: create    generate-ddl: true    show-sql: true 
+server:  port: 7777
