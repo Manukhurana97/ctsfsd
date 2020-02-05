@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -75,6 +76,32 @@ public class Controller {
 //		customer.setId(0);
 		return SS.createCustomer(customer);
 		
+	}
+	
+	@DeleteMapping("/customerdel/{customerId}")
+	public void deletebyid(@PathVariable Integer customerId)
+	{
+		SS.deletebyid(customerId);
+		
+	}
+	
+	@DeleteMapping("/customerdel")
+	public void deleteall()
+	{
+		SS.deleteall();
+		
+	}
+	
+	@GetMapping("Customer/name/{name}")
+	public List<Customer> findByname(@PathVariable String name)
+	{
+		return SS.findByname(name);
+	}
+	
+	@GetMapping("Customer/email/{email}")
+	public List<Customer> findByemail(@PathVariable String email)
+	{
+		return SS.findByemail(email);
 	}
 	
 }

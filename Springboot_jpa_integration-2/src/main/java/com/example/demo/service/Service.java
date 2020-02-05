@@ -10,4 +10,10 @@ public interface Service {
 	public List<Customer> getAllCustomer();
 	public Optional<Customer> findbyId(Integer CustomerId);
 	public Customer createCustomer(Customer customer);
+	
+	public void deleteall();
+	public void deletebyid(Integer CustomerId); 
+	public List<Customer> findByname(String name);
+	public List<Customer> findByemail(String email);
+	
 }

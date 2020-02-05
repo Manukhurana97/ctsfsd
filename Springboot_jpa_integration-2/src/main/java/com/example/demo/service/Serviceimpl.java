@@ -5,6 +5,8 @@ import java.util.Optional;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.bind.annotation.DeleteMapping;
+
 import com.example.demo.dao.Dao;
 import com.example.demo.model.Customer;
 
@@ -44,7 +46,35 @@ public class Serviceimpl implements Service  {
 		
 		return D.save(customer);
 	}
+
+
+	@Override
+	public void deleteall() {
+		D.deleteAll();
+		
+	}
+
+
+	@Override
 	
+	public void deletebyid(Integer CustomerId) {
+		D.deleteById(CustomerId);
+		
+	}
+
+
+	@Override
+	public List<Customer> findByname(String name) {
+		
+		return D.findByname(name);
+	}
+
+
+	@Override
+	public List<Customer> findByemail(String email) {
+		
+		return D.findByemail(email);
+	}
 	
 	
 }
