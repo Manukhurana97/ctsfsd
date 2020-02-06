@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: spring-jpa 
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo1
+    username: root
+    password: manu2462  jpa:    hibernate:      ddl-auto: create
