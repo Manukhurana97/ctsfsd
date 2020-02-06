@@ -11,5 +11,6 @@ import com.example.demo.model.Item;
 public interface Dao extends MongoRepository<Item, Integer> {
 	public List<Item> findByitemname(String itemname);
 	public List<Item> findByItemnameAndItemid(String itemname, Integer itemid);
+	public List<Item> findByItemnameOrItemid(String itemname, Integer itemid);
 
 }

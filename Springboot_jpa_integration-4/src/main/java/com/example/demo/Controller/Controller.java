@@ -1,5 +1,6 @@
 package com.example.demo.Controller;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,8 +29,9 @@ public class Controller {
 	}
 	
 	@PostMapping("/insert_item")
-	public Item createDate(@RequestBody Item item)
+	public Item createData(@RequestBody Item item)
 	{
+		item.setDate(LocalDate.now());
 		return D.insert(item);
 	}
 	
@@ -38,6 +40,8 @@ public class Controller {
 	{
 		return D.findAll();
 	}
+	
+	
 	
 	@GetMapping("/item/{itemid}")
 	public Optional<Item> findByid(@PathVariable Integer itemid) {

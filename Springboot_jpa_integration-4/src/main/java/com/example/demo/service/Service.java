@@ -7,7 +7,7 @@ import com.example.demo.model.Item;
 
 public interface Service {
 	public List<Item> getAlldata();	
-	public Item createDate(Item item);
+	public Item createData(Item item);
 	
 	public Optional<Item> findByid(Integer itemid);
 	

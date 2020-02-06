@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,8 +29,10 @@ public class ServiceImpl implements Service  {
 
 	@Override
 	@Transactional
-	public Item createDate(Item item) {
-		// TODO Auto-generated method stub
+	public Item createData(Item item) {
+		
+//		item.setDate(LocalDate.now());
+		
 		return D.insert(item);
 	}
 
