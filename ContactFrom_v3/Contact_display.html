@@ -1,0 +1,29 @@
+<html>
+
+    <head>
+        <script src="js/Order.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+
+    <body onload="loadItems()">
+        <a href="Order.html">Add Product</a>
+
+        <table id="alpha dynamic" class="table table-hover">
+            <thead>
+            <tr>
+
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Subject</th>
+                <th scope="col">Message</th>
+
+            </tr>
+            </thead>
+            <tbody id="prdMgsData"></tbody>
+        </table>
+
+    <button onclick="clear_all_data()">Clear all data</button>
+
+    </body>
+
+</html>
