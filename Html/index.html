@@ -1,0 +1,134 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+  <head>
+
+  </head>
+
+  <body>
+    <h1 id="demo"></h1>
+    <form name="form">
+      <input type="text" id="time" name="time">
+    </form>
+    <video controls autoplay>
+      <source src="y2mate.com%20-%20daddy_yankee_snow_con_calma_video_oficial_DiItGE3eAyQ_360p.mp4">
+    </video>
+
+    <iframe width="420" height="315"
+            src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
+    </iframe>
+
+    <br>
+    <br>
+
+
+
+    <form id="lcn" name="lcn">
+      <input type="text" name="lat" >
+      <input type="text" name="long">
+      <button onclick="getlocation()">Click me </button>
+    </form>
+
+  <script>
+    if (window.localStorage)
+    {
+      window.document.write("support\n");
+
+      document.write(localStorage.firstname="abc");
+
+      document.getElementById("demo").innerHTML = "hello";
+
+      localStorage.setItem("key", "12345");
+      let x = localStorage.getItem("key");
+
+      window.document.write(x);
+
+
+      function getcolor() {
+        x = Math.floor(Math.random()*256);
+        y = Math.floor(Math.random()*256);
+        z = Math.floor(Math.random()*256);
+
+        var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+        return bgColor;
+
+
+
+      }
+
+      function fun(){
+
+        d = new Date()
+        D = d.getDate();
+        M = d.getMonth();
+        Y = d.getFullYear()
+        H = d.getHours();
+        m = d.getMinutes();
+        s =d.getSeconds();
+
+        var x = D+"/"+M+"/"+Y+" - "+H+":"+m+":"+s;
+        document.form.time.value =x;
+
+        // if(s%2==0)
+        // {
+        //   document.bgColor = getcolor();
+        // }
+        // else
+        //   {
+        //     document.bgColor=getcolor();
+        //   }
+      }
+       setInterval("fun()", 1000)
+    }
+    else
+    {
+      alert("Not Support")
+    }
+
+    if(window.sessionStorage)
+    {
+      // alert("Session storage Exist");
+      sessionStorage.setItem("key1", "check1");
+      sessionStorage.setItem("key2", "check3");
+      let zz = sessionStorage.getItem("key1");
+      document.write(zz);
+    }
+    else{
+
+        alert("Session storage do not  Exist")
+
+    }
+
+    function getlocation() {
+      if(navigator.geolocation)
+      {
+          navigator.geolocation.getCurrentPosition(getposition, errorHandler)
+      }
+    }
+
+    function getposition(position)
+    {
+      var long = position.coords.longitude;
+      var lat = position.coords.latitude;
+
+      document.lcn.lat.value = lat;
+      document.lcn.long.value = long;
+      document.write(lat+" "+long);
+    }
+
+    function errorHandler(error) {
+      if(error.code!=0)
+      {
+        alert("User denied");
+      }
+      else{
+        alert("position not avaliable");
+      }
+    }
+
+
+
+  </script>
+
+  </body>
+</html>
