@@ -1,0 +1,13 @@
+server:
+  port: 8761
+  
+eureka:
+    client:    register-with-eureka: false # false:  otherwise treated as microservice
+    fetch-registry: FALSE
+    
+  server:
+    wait-time-in-ms-when-sync-empty: 0
+    
+spring:  application:    name: common-server
+  
+
