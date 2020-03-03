@@ -1,0 +1,47 @@
+1) microservice?
+
+-> single deployable software
+	broken down in small grains
+	small domain can be deploy independently
+	lightweight communication protocols ie HTTP or JSON
+	Technilogy neutral protocol 
+
+ESB(Enterprice Service Bus)
+
+2) Spring boot and Spring Cloud 
+
+-> Flow {Architecture}
+	
+	User(call/response) --> {cloud [(Route Mapping) -> (parameter Destructing) -> (Json->Json Object mapping) -> (Business Logic execution) -> (Java-> JSon object mapping) ]}
+
+	Flexible
+	scalable
+	
+3) challanges of MS
+	Location transparency
+	Resilient(Service  should be fail fast)
+	Repetable(Ensure that every time new instance start it has same configration )
+	Scalable
+	Right-sized
+
+4) Routing Pattern (zull, eureka ->(service Discovery))
+	to ensure every we have save conf(same port no  etc.....)
+
+
+
+
+Spring cloud version : Hoxton.SR1	
+port : 8761
+
+@EnableEurekaServer (dependency)
+
+eureka.client.register-with-eureka: (otherwise treated as microservices)
+
+BootStrap.yml: Initialized first(more priority then application.yml)
+
+Admin-Server: create a admin server (dependency -Springbootadmin server)
+@EnableAdminServer
+
+
+Starter-feign
+
