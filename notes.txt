@@ -11,10 +11,10 @@ Spring : Application framework
 
 3) @Repository: used with crud operation in (dao) layer while dealing with the database.It 			automatically handle the exception   
 	
-4) @service: donate class provide some service (utility class)
+4) @service: donate class provide some service (utility class) (@service<->@component)
 
 5) @component: make java class as bean class
-
+	       Component
 6) @SpringbootApplication: Starting point of the application
 
 7) @spring class path: when code run , check for annotation and treat as such.
@@ -37,9 +37,18 @@ Spring : Application framework
 
 15) @Autowired: is used for constructor and setter/ getter level injection.
 
-16) Bean: 
+16) @Bean: To Declared a bean.(Bean:-> java bean is a java class with private method with public 		   getter ans setter) implements serializable: converting the state of an object into a 						       byte stream
+	-> bean must be public with no args constructor
 
-17) configure:
+17) @configure: class declare one or more @bean method 
+
+18) @generativetype:
 
 jwt: Json web token
 Jpa : Java Persistence Api: Let you to perform orm {map (entity class) <--> (sql table)}
+
+
+
+Spring Boot MicroService:
+
+3
