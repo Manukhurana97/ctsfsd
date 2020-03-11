@@ -5,7 +5,7 @@ Spring : Application framework
 
 
 
-1) @RestController: (@Controller + @RequestBody) -> Restfull webservice-> return data and 			    object data written into Http as json or xml.Its used in class level
+1) @RestController: (@Controller + @RequestBody) -> Restfull webservice-> return data and object data written into Http as json or xml.Its used in class level
 
 2) @Controller: create a map of a model object. Make a class as a controller 
 
@@ -37,7 +37,7 @@ Spring : Application framework
 
 15) @Autowired: is used for constructor and setter/ getter level injection.
 
-16) @Bean: To Declared a bean.(Bean:-> java bean is a java class with private method with public 		   getter ans setter) implements serializable: converting the state of an object into a 						       byte stream
+16) @Bean: To Declared a bean.(Bean:-> java bean is a java class with private method with public getter ans setter) implements serializable: converting the state of an object into a byte stream
 	-> bean must be public with no args constructor
 
 17) @configure: class declare one or more @bean method 
@@ -51,7 +51,7 @@ Jpa : Java Persistence Api: Let you to perform orm {map (entity class) <--> (sql
 
 Spring Boot MicroService:
 
-3
+11
 
 -> single deployable software
 	broken down in small grains
@@ -59,18 +59,18 @@ Spring Boot MicroService:
 	lightweight communication protocols ie HTTP or JSON
 	Technilogy neutral protocol 
 
-ESB(Enterprice Service Bus)
+ESB(Enterprice Service Bus) -----> latest technology
 
 2) Spring boot and Spring Cloud 
 
--> Flow {Architecture}
+-> Flow { Architecture }
 	
 	User(call/response) --> {cloud [(Route Mapping) -> (parameter Destructing) -> (Json->Json Object mapping) -> (Business Logic execution) -> (Java-> JSon object mapping) ]}
 
 	Flexible
 	scalable
 	
-3) challanges of MS
+3) challanges of MicroService:-
 	Location transparency
 	Resilient(Service  should be fail fast)
 	Repetable(Ensure that every time new instance start it has same configration )
@@ -82,11 +82,14 @@ ESB(Enterprice Service Bus)
 
 
 
+Dependency:- Eurekaserver(Server), discoveryclient(Client)
 
 Spring cloud version : Hoxton.SR1	
 port : 8761
 
-@EnableEurekaServer (dependency)
+@EnableEurekaServer  : for server
+
+@EnableDiscoveryClient : for client
 
 eureka.client.register-with-eureka: (otherwise treated as microservices)
 
@@ -96,6 +99,4 @@ Admin-Server: create a admin server (dependency -Springbootadmin server)
 @EnableAdminServer
 
 
-Starter-feign
-
-
+(Spring-starter-web brings in tomcat by default)
