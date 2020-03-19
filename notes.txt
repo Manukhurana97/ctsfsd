@@ -1,10 +1,5 @@
 Spring : Application framework
 
-
-
-
-
-
 1) @RestController: (@Controller + @RequestBody) -> Restfull webservice-> return data and object data written into Http as json or xml.Its used in class level
 
 2) @Controller: create a map of a model object. Make a class as a controller 
@@ -19,15 +14,14 @@ Spring : Application framework
 
 7) @spring class path: when code run , check for annotation and treat as such.
 
-8) @RequestMapping : Its used in class level and method level, Map web request with specific class 			     or method handler (default -> get )
+8) @RequestMapping : Its used in class level and method level, Map web request with specific class or method handler (default -> get )
 
-9) @PathVariable: expected argumant is a variable in path
+9) @PathVariable: expected argumant is a variable in path.
 
 10) @RequestBody: Used with post method to get the data/ bind the incoming response body 
 		  (Uses Httpmessageconvertor to convert http to specific object) 
 
-11) @ResponseBody: bind the return value to the http response
-
+11) @ResponseBody: bind the return value to the http response.
 
 12) @Entity: Create table with class name
 
@@ -42,7 +36,7 @@ Spring : Application framework
 
 17) @configure: class declare one or more @bean method 
 
-18) @generativetype:
+18) @generativetype:It is automatically increment the primary key value 
 
 jwt: Json web token
 Jpa : Java Persistence Api: Let you to perform orm {map (entity class) <--> (sql table)}
