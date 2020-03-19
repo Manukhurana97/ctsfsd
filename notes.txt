@@ -9,12 +9,12 @@ Spring : Application framework
 
 2) @Controller: create a map of a model object. Make a class as a controller 
 
-3) @Repository: used with crud operation in (dao) layer while dealing with the database.It 			automatically handle the exception   
+3) @Repository: used with crud operation in (dao) layer while dealing with the database.It automatically handle the exception   
 	
 4) @service: donate class provide some service (utility class) (@service<->@component)
 
-5) @component: make java class as bean class
-	       Component
+5) @component: make java class as bean class ( Spring framework will autodetect these classes for dependency injection )
+	     	Component
 6) @SpringbootApplication: Starting point of the application
 
 7) @spring class path: when code run , check for annotation and treat as such.
