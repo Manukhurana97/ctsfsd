@@ -1,0 +1,21 @@
+server:
+  port: 8000
+
+
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /console
+      settings:
+        web-allow-others: true
+
+
+  application:
+    name: Product
+
+
+  mvc:
+    view:
+      prefix: /WEB-INF/VIEWS/
+      suffix: .jsp
