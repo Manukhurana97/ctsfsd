@@ -1,12 +1,12 @@
 login docker 					:	docker login
 check docker images 				:	docker images/ docker images ls
-docker build image 				:	docker build -t(for name of the template) 
-docker run images docker run -p(port{user port: :	defined port}) (image name )
+docker build image 				:	docker build -t(for name of the template) .
+docker run images 				:	docker run -p(port{user port:defined port}) (image name )
 docker ps -a  					:	list of container running
 push to docker hub				:	docker push (image name)
 stop the container 				:	docker stop (container id)
 docker delete container 	 		:	docker rm (first 3 letter of the container followed by space)
 docker delete by image name	 		:	docker rmi (first 3 letter of the images followed by space)
-docker delete by image id			:	deocker rmi -f imageid
+docker delete by image id			:	docker rmi -f imageid
 commit 					 	:	docker commit (container id) (username)/(image id) : tag
 push to docker hub				:	docker push (image id)
