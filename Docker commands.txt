@@ -2,7 +2,7 @@ login docker 					:	docker login
 check docker images 				:	docker images/ docker images ls
 docker build image 				:	docker build -t(for name of the template) .
 docker run images 				:	docker run -p(port{user port:defined port}) (image name )
-list of container running                          :	docker ps -a 
+list of container running                       :	docker ps -a 
 push to docker hub				:	docker push (image name)
 stop the container 				:	docker stop (container id)
 docker delete container 	 		:	docker rm (first 3 letter of the container followed by space)
