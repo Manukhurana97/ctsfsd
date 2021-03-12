@@ -1,0 +1,74 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-03-11T19:56:36.732Z",
+        "line": 10,
+        "name": "A a user i want to create a new post",
+        "description": "",
+        "id": "post-functionality;a-a-user-i-want-to-create-a-new-post;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1325000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "i have create new post",
+            "match": {
+              "location": "com.example.cucumberexample2.SelfDefining.i_have_create_new_post()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 162000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I send a post to be create with id 15,title new post, and content hello",
+            "match": {
+              "arguments": [
+                {
+                  "val": "15",
+                  "offset": 35
+                },
+                {
+                  "val": "new post",
+                  "offset": 44
+                },
+                {
+                  "val": "hello",
+                  "offset": 66
+                }
+              ],
+              "location": "com.example.cucumberexample2.SelfDefining.i_send_a_post_to_be_create_with_id_title_new_post_and_content_hello(java.lang.Integer,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 46000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I should be able to see my newly created post",
+            "match": {
+              "location": "com.example.cucumberexample2.SelfDefining.i_should_be_able_to_see_my_newly_created_post()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Post functionality",
+    "description": "",
+    "id": "post-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/resourses/features/Cucumber.feature",
+    "tags": []
+  }
+]
