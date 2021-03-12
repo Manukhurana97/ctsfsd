@@ -48,6 +48,7 @@
 		- Security
 		- Jwt
 		- Zull level Security(Jwt, Spring Security)
+ - Cucumber Spring test
 		
 		
 #### Angular
