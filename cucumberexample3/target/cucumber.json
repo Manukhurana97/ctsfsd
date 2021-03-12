@@ -1,0 +1,130 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1955000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user details:",
+            "match": {
+              "location": "com.example.cucumberexample2.SelfDefining.the_user_details(java.util.List\u003cjava.util.Map\u003cjava.lang.String, java.lang.String\u003e\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "username",
+                  "password"
+                ]
+              },
+              {
+                "cells": [
+                  "1",
+                  "manu",
+                  "manu@123"
+                ]
+              },
+              {
+                "cells": [
+                  "2",
+                  "abc",
+                  "abc@123"
+                ]
+              }
+            ],
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-03-12T12:14:41.661Z",
+        "line": 17,
+        "name": "check login is successful with credential",
+        "description": "",
+        "id": "check-login--functionality;check-login-is-successful-with-credential;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user is on login page",
+            "match": {
+              "location": "com.example.cucumberexample2.SelfDefining.user_is_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 17000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user enter manu and manu@123",
+            "match": {
+              "arguments": [
+                {
+                  "val": "manu",
+                  "offset": 11
+                },
+                {
+                  "val": "manu@123",
+                  "offset": 20
+                }
+              ],
+              "location": "com.example.cucumberexample2.SelfDefining.user_enter_username_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 21000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "check  username and password is correct is correct",
+            "match": {
+              "location": "com.example.cucumberexample2.SelfDefining.check_username_and_password_is_correct_is_correct()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SmokeFeature"
+          },
+          {
+            "name": "@smoketest"
+          }
+        ]
+      }
+    ],
+    "name": "check login  functionality",
+    "description": "",
+    "id": "check-login--functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/resourses/features/Cucumber.feature",
+    "tags": [
+      {
+        "name": "@SmokeFeature",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
