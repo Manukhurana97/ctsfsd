@@ -4,35 +4,35 @@ https://hub.docker.com/
 1) Commands
 
 Check Docker version				: 	docker version
-Login docker 						:	docker login
+Login docker 					:	docker login
 
-List  container			                   	:	docker ps -a 
-List images 						:	docker images/ docker images ls
+List  container			                :	docker ps -a 
+List images 					:	docker images/ docker images ls
 
 Docker build image 				:	docker build -t(for name of the template) .
 
-Docker run						:	docker run (image name )   /  docker run (image name ) : (tag)    {default tag is latest}
+Docker run					:	docker run (image name )   /  docker run (image name ) : (tag)    {default tag is latest}
 Docker run with input				:	docker run -i (image name)
-Docker run with input terminal		:	docker run -it (image name)
-Docker run container (port mapping)	:	docker run -p( port{new port:defined port} ) (image name )
+Docker run with input terminal			:	docker run -it (image name)
+Docker run container (port mapping)		:	docker run -p( port{new port:defined port} ) (image name )
 Docker run-in detach mode			: 	docker run -d (image name )
 Docker run-in Attach mode			: 	docker attach  (container name ) // first few letter of id
 Docker run Volume mapping			:	docker run -v (external path : internal path(var/lib/ ??)) image name )
 
 
-Stop the container 					:	docker stop (container id)
+Stop the container 				:	docker stop (container id)
 
-Docker delete container 	 			:	docker rm (first 3 letter of the container followed by space) /  docker rm  container  name
-Docker remove by image name	 	:	docker rmi (first 3 letter of the images followed by space)
+Docker delete container 	 		:	docker rm (first 3 letter of the container followed by space) /  docker rm  container  name
+Docker remove by image name	 		:	docker rmi (first 3 letter of the images followed by space)
 Docker delete by image id			:	docker rmi -f imageid
-Commit 					 		:	docker commit (container id) (username)/(image id) : tag
+Commit 					 	:	docker commit (container id) (username)/(image id) : tag
 
 Pull from docker hub				:	docker pull (image name)
-Push to docker hub					:	docker push (image id)
+Push to docker hub				:	docker push (image id)
 
-Execute command in running docker	: 	docker exec (image name) (command)
+Execute command in running docker		: 	docker exec (image name) (command)
 
-Inspect properties of running container	: 	docker inspect (image name)
+Inspect properties of running container		: 	docker inspect (image name)
 
 Docker image history				:	docker history (image name)
 
