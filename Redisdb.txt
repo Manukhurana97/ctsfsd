@@ -1,0 +1,87 @@
+Redis db Commands 
+
+Set key value 							:	set <key>  <value>  -> ex set 1 ”hello"
+Create entry if key not exists		:	set <key>  <value> nx
+Set data with expiration time			: 	set <key> <value> ex 10 (seconds) px (milliseconds) /  {setex/setpx <key> <seconds>/<millseconds> <value>}
+Set multiple key and values			:	mset <key> <value> <key> <value> <key> <value> ...
+Set multiple value without rewriting 	: 	msetnx <key> <value> <key> <value> <key> <value> ...  /  msetnx 1 "a" 2 "b" 3 "c"
+Set data from position				:	setrange <key> <time> <values>   /
+
+List
+Create list 							: 	lpush <list name> <value>
+Add data to last 					:	rpush <list name> <value>
+How data inlist						:	lrange <list name> 0 -1
+Pop the element from last				:	rpop <list name>
+Pop element from first				:	lpop <last name>
+Remove range of element				: 	ltrim <list name> <start> <end> 
+Add data by index					:	lset  <list name> <position> <data> 
+Get data by index					: 	lindex fruits 0
+Insert before data 					:	linsert <list name> before/after <datapoint> <data>
+Length of list						:	lien <list name>	
+Hash
+create hashes 						:	hset  <field> <key> value
+Get data								:	hget  <field> <key>
+Set miltiple data					:	hmset  <field> <key> value <key> value …
+Get multiple data					:	hmget <field> <key>  <key> …
+Get all data 						:	hgetall <field>
+Get all keys							:	hvals <field>
+Get all values						: 	hkeys <field>
+Check data exist 					: 	exists <field> values
+Get Len of data						:	hlen <field>
+Del data								: 	hdel <field> <keys> 
+Increment val						: 	hinderby <field> <keys> 
+
+
+Set
+Create set and add data				:	sadd <set name> <values>
+Get data from set					:	smembers <set name>
+Check if particular member exists		:	sismember <set name> <value>
+Total no of element in set			: 	scard <set name> / smembers <set name>
+Mode data b/w 2 sets					:	smove <sourse set name> <destination set name> <data>
+Pop data	number of elements			:	spop <set name> <numbers>
+Check the difference between 2 sets	:	sdiff <first set name> <second set name>
+Store difference output in another set:	stiffstore <destination set name> <first set name> <second set name>
+Intersection of sets					:	sinter <first set name> <second set name>
+Intersection of sets store in another 	:	sinterstore  <destination set name> <first set name> <second set name>
+Union of sets						:	sunion <first set name> <second set name>
+
+
+Sortedset
+Create a sorted list 					:	zadd <set name>  <key> <value> <key> <value>
+Add data to existing sorted list		:	zadd <set name> <key> <value>
+Arrange data 						:	zrange <set name> <start> <end>
+Add final data						:	zadd <set name> NX <key> <value>
+Get the value/score of key			: 	zscore <set name> <key>
+Get the rank of key					:	zrank <set name> <key>
+Reverse the rank						:	zrevrank <set name> <key>
+Check the score between 				: 	zcount <set name> start end 
+Delete multiple element 				:	zpopmax <name> <no of element> 
+
+
+
+Get all keys 						:    keys *
+Get and set the value 				:	getset <key> <value>
+Get multiple value 					: 	mget <key> <key> <key> ... 
+Get part of values					:	get range <key> <start> <end>
+
+
+Set expiration explicitly:			:	Expire <key>
+Append data 							:	append <key> <value>
+
+Incrementing value					:	incr key <value> default 1
+Incrementing value					:	incrbyfloat key 
+Decrease value						:	decr key / decrby key <value> default 1
+ 
+Get value by key 						:	get <key>
+Delete value by key					:	del <key> / unlink <key>
+
+Check if data exist 					: 	exist <key>
+Check time to live					:	ttl <key> / pttl <key> 
+Get all keys 						: 	keys *
+Shutdown								: 	shutdown [save/nosave]
+Randomkeys							: 	RandomKey
+Rename keys							: 	Rename <old name> <name name>
+Swap key name 						: 	renamenx <old name> <new name>									: 	touch <key name>
+Type of data							:	type <key>
+Dump a value							:	dump <key>
+Restore value of key					:	restore <key> <ttl> <hash of the value from dump>
