@@ -1,0 +1,137 @@
+Mongo DB
+
+
+
+
+// show databases
+show dbs
+
+//use db
+use db;
+
+//show table
+show tables
+
+//create collections
+db.createCollection("col");
+
+
+//show collections
+show collections
+
+
+// insert one data
+db.col.insertOne({"name":"manu"});
+
+// insert many at ones
+db.col.insertOne({"name":"manu",
+    "email": "manu@gmail.com",
+    "ip":"10.10.101.10"} ,{unique:true})
+
+// insert many at many
+db.col.insertMany([
+    {"name":"manu", "email": "manu@gmail.com",
+    "ip":"10.10.101.10"}, {unique:true},
+    {"name":"aanu", "email": "anu@gmail.com",
+        "ip":"10.10.102.10"},{unique:true},])
+db.col.insertMany([
+    { "_id": 1, "dept": "A", "item": { "sku": "111", "color": "red" }, "sizes": [ "S", "M" ] },
+    { "_id": 2, "dept": "A", "item": { "sku": "111", "color": "blue" }, "sizes": [ "M", "L" ] },
+    { "_id": 3, "dept": "B", "item": { "sku": "222", "color": "blue" }, "sizes": "S" },
+    { "_id": 4, "dept": "A", "item": { "sku": "333", "color": "black" }, "sizes": [ "S" ] }
+]);
+
+db.col.ensureIndex({x:1});
+db.col.getIndexes()
+
+// distinct
+db.col.distinct( "dept" );
+db.col.distinct( "item.sku" );
+
+
+// aggregate
+db.col.aggregate([{$match:{sizes:["S","M"]}}]);
+
+
+//get col counts
+db.col.count();
+
+//find one
+db.col.findOne();
+//findAll
+db.col.find();
+// find and sort
+db.col.find().sort({"name":1})
+//find and limit/head
+db.col.find().limit(2)
+//skip in between
+db.col.find()
+//find by id
+db.col.find({"_id": ObjectId("6070b64c09cb51272f9be75a")})
+
+//find by particular and beautify
+db.col.find({"name":"manu"}).pretty();
+db.col.find({"name":"manu"}, {_id:0}).explain()
+
+// find and udpate
+db.col.findOneAndUpdate(
+    {"_id": ObjectId("606f5fb7b08dcc4fcf7a3c44")},
+    { $set :{"name":"manu","email": "manu@gmail.com"}},
+    {upsert: true}
+    )
+
+// add col in existing: if columns alpha dont exists, loop through each records, match the condition and add the data
+db.col.find({alpha: {$exists:false}}).forEach(function (col) {
+    {db.col.updateMany({"name":"manu"}, {$set:{alpha: parseInt(Math.random() * 100)}})}});
+db.col.find({beta:{$exists:false}}).forEach(function (col) {
+    {db.col.updateMany({"name":"manu"},{$set:{beta: true}})}
+});
+
+
+// find by multiple
+db.col.find({$and :[ {"_id": ObjectId("6070b61809cb51272f9be755")}
+        ,{"name":"manu"}]})
+
+//find null
+db.col.find({"email":null});
+// db.col.find({"_id": ObjectId(db.col.findOne({"email":"manu@gmail.com"}))});
+// find regex
+db.col.find({"email":{$regex:"^[a-zA-Z]"}});
+// find regex text
+db.col.createIndex({subject:"text"});
+db.col.find( { $text: { $search: "manu", $caseSensitive:true} } )
+
+
+//data type
+var data = [10, 20, "str", true]
+data.toString()
+
+var date1 = new Date();
+date1
+db.col.insertOne({"name":"test","Date":date1});
+
+var binary = new BinData(1, "232sa");
+binary
+
+//function
+var fun1 = new Function()
+    {var x;
+    x=10;};
+
+//object id
+var id = ObjectId();
+id.str
+id.getCurrentTime
+id.toString()
+id.valueOf()
+
+
+//backup mongo
+// mongodump --host HOST_NAME --port PORT_NUMBER DB_PATH --out BACKUP_DIRECTORY
+//mongodump --dbpath /data/db/ --out /data/backup/
+
+//update
+db.col.findOneAndUpdate({"_id":ObjectId("6070b64c09cb51272f9be759")},{$set:{"alpha":10, "beta":false, "name":"abc", "email":"abc@gmail.com"}});
+
+//delete many
+db.col.deleteMany({"name":"manu"})
