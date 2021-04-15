@@ -48,6 +48,9 @@
 		- Security
 		- Jwt
 		- Zull level Security(Jwt, Spring Security)
+	- Caching (Redis)
+	- Testing Mockito, Junit, Cucumber framework
+	- Messaging (Active MQ, Rabbit MQ)
  - Cucumber Spring test
 		
 		
@@ -56,6 +59,7 @@
 	- Compoment
 	- Service
 	- Routing.....
+
       
 #### NOTES
 	- Rest
