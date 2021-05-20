@@ -72,13 +72,3 @@
 	
 	
 	
-	public static void pattermatch(String str){
-
-      Pattern pattern = Pattern.compile("[^A-Za-z0-9_]");
-      Matcher matcher = pattern.matcher(str);
-      if (matcher.find())
-         System.out.println("Special characters are in the string.");
-      else
-         System.out.println("Special characters are not in the string.");
-
-	}
