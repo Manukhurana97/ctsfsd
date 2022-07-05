@@ -5,6 +5,11 @@ I: Interface segregation
 D: Dependency Inversion
 
 
-Single Responsibility: Only one region for the class to change (focus/specific  functionality).
-Open/Close: open for extention and close for modification.
-Liskov SSubstitutable: we soblid be subsituting the base class object with the child class object & this should not alter the behaviour of program
+- Single Responsibility: Only one region for the class to change (focus/specific  functionality).
+--  eg : controller class is for the rest endpoint and service class is for the business logic and dao class is for database layer. we should not implement business logic or validation logic directly in controller class.
+
+- Open/Close: open for extention and close for modification.
+--  eg : identitly the common functionality and make one abstract class and the child class should be modified instead of base class.
+
+- Liskov SSubstitutable: we soblid be subsituting the base class object with the child class object & this should not alter the behaviour of program: 
+-- eg: 
