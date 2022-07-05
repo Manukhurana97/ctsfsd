@@ -11,7 +11,7 @@ D: Dependency Inversion
 - Open/Close: open for extention and close for modification.
 --  eg : identitly the common functionality and make one abstract class and the child class should be modified instead of base class.
 
-- Liskov Substitutable: we soblid be subsituting the base class object with the child class object & this should not alter the behaviour of program: 
+- Liskov Substitutable: we should be subsituting the base class object with the child class object & this should not alter the behaviour of program: 
 -- eg : chaning the behaviour of base class in very dangerous.
 
 - Intgerface Segregation: Client should not be force to depend upon the interface which they do not use.(break interface into interface with small methods and have high cohesive )
