@@ -1,0 +1,10 @@
+S : Single Responsibility
+o: Open / Code
+L: Liskov Substitutable 
+I: Interface segregation
+D: Dependency Inversion
+
+
+Single Responsibility: Only one region for the class to change (focus/specific  functionality).
+Open/Close: open for extention and close for modification.
+Liskoc SSubstitutable: 
