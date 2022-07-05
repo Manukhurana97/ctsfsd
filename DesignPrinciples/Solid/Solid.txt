@@ -14,4 +14,4 @@ D: Dependency Inversion
 - Liskov SSubstitutable: we soblid be subsituting the base class object with the child class object & this should not alter the behaviour of program: 
 -- eg : chaning the behaviour of base class in very dangerous.
 
-- Intgerface Segregation: Client should not be force to depend upon the interface which they do not use.
+- Intgerface Segregation: Client should not be force to depend upon the interface which they do not use.(break interface into interface with small methods and have high cohesive )
