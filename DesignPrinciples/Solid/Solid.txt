@@ -7,4 +7,4 @@ D: Dependency Inversion
 
 Single Responsibility: Only one region for the class to change (focus/specific  functionality).
 Open/Close: open for extention and close for modification.
-Liskoc SSubstitutable: 
+Liskov SSubstitutable: we soblid be subsituting the base class object with the child class object & this should not alter the behaviour of program
