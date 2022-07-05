@@ -12,4 +12,4 @@ D: Dependency Inversion
 --  eg : identitly the common functionality and make one abstract class and the child class should be modified instead of base class.
 
 - Liskov SSubstitutable: we soblid be subsituting the base class object with the child class object & this should not alter the behaviour of program: 
--- eg: 
+-- eg : chaning the behaviour of base class in very dangerous.
