@@ -16,5 +16,5 @@ D: Dependency Inversion
 
 - Intgerface Segregation: Client should not be force to depend upon the interface which they do not use.(break interface into interface with small methods and have high cohesive )
 
-- Dependency Inversion: Making dependency dynmaic 
+- Dependency Inversion: Making dependency dynmaic (the code should not create the object of all the dependency by itself, it should be provided from the code externally)
 -- eg: we format the output in json string and output the json string  into file, instead of hardcording to json string and file output we allow user to give the formatter and output type, autowire use this principle .
