@@ -34,13 +34,14 @@ public class User {
         this.address = address;
     }
 
+    @Override
+    public String toString() {
+        return "name: " + name + " age: " + age + " \nAddress: " + address;
+    }
+
     // instance of builder class
     public static UserBuilder builder() {
         return new UserBuilder();
-    }
-
-    public String toString(){
-        return "name: "+name+" age: "+age+" \nAddress: "+address;
     }
 
     // builder class
@@ -49,7 +50,11 @@ public class User {
         public String name;
         public int age;
         public Address address;
-        private User user;
+        private final User user;
+
+        UserBuilder() {
+            user = new User();
+        }
 
         public UserBuilder setName(String name) {
             this.name = name;
@@ -66,23 +71,21 @@ public class User {
             return this;
         }
 
-        // public no ag constructor of parent class
+
         public User build() {
             return this.build(name, age, address);
         }
 
         private User build(String name, int age, Address address) {
-             user.setName(name);
-             user.setAge(age);
-             user.setAddress(address);
+            user.setName(name);
+            user.setAge(age);
+            user.setAddress(address);
             return this.user;
         }
+
 
         public User getUser() {
             return this.user;
         }
-
     }
-
 }
-
