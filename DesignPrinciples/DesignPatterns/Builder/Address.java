@@ -39,12 +39,13 @@ public class Address {
         this.street = street;
     }
 
-    public static AddressBuilder builder() {
-        return new AddressBuilder();
+    @Override
+    public String toString() {
+        return "Street: " + street + " City: " + city + " Street: " + street + " Country " + country;
     }
 
-    public String toString() {
-        return "Street: " + street + " City: " + city + " Street: " + street + " Country" + country;
+    public static AddressBuilder builder() {
+        return new AddressBuilder();
     }
 
     public static class AddressBuilder {
@@ -53,7 +54,11 @@ public class Address {
         private String state;
         private String country;
         private String street;
-        private Address address;
+        private final Address address;
+
+        AddressBuilder() {
+            address = new Address();
+        }
 
         public AddressBuilder setCity(String city) {
             this.city = city;
@@ -75,6 +80,8 @@ public class Address {
             return this;
         }
 
+
+
         public Address build() {
             return this.build(street, city, state, country);
         }
@@ -85,6 +92,10 @@ public class Address {
             address.setState(state);
             address.setCountry(country);
 
+            return this.address;
+        }
+
+        public Address getAddress() {
             return this.address;
         }
 
