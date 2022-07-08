@@ -18,3 +18,17 @@ There are 26 type of Design patterns divided into 3 types
     -- In builder we remove the logic related to the object construction from the client code and abstract in seperate class.
     
     
+    
+    <br><br>-With builder aas a inner static class we can easily create the immutable class
+    - Abstract builder is also not required where the product is class not a part of any inheritance hierarchy.
+    - if running into too many constructor argument problem, it is good indicication to have  builder design pattern.
+    
+    
+<br><br>Example of builder in java<br>
+- java.lang.stringbuilder class as well as other buffer class bytebuffer, charbuffer are the example of builder class.
+    
+    
+    
+<br><br><b>Summery</b>
+- when we have a complex construtor or an object is build in multiple steps.
+
