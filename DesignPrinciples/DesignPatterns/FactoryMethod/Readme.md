@@ -20,3 +20,5 @@
 - another design pattern called abstract design pattern uses factory design  pattern.
 
 
+<B>Eg.</B>: iterator method
+
