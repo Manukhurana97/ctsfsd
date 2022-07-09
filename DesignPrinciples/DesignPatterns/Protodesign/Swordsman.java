@@ -11,6 +11,12 @@ public class Swordsman extends GameUnit{
     public String toString() {
         return "Swordsman{" +
                 "state='" + state + '\'' +
+                getPosition() +
                 '}';
+    }
+
+    @Override
+    protected void reset() {
+        this.state = "idle";
     }
 }
