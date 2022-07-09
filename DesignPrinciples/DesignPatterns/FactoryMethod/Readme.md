@@ -5,7 +5,7 @@
 
 
 <h2> Implementation</h2>
--  we starts by creating the class for our creater.
--  -  Creater itself can se concrete, it provide the default object or it can be abstract.
--  -  Implementation will override the metord and return the object.
+<ul>  we starts by creating the class for our creater.</ul>
+<li>  Creater itself can se concrete, it provide the default object or it can be abstract.</li>
+<li>  Implementation will override the metord and return the object.</li>
 
