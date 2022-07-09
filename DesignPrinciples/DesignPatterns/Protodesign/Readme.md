@@ -39,3 +39,13 @@ We state by creating a class which will be a prototype
 <ul>
 <li>Clone method is an example of a protytype (object.clone())</li>
 </ul>
+
+
+<br>
+<h2>Pitfall</h2>
+<ul>
+<li>Usability depends on the number of properties in state that are mutable or can be shallow copied, AN object  where state is composed of large number of mutable object is complicated to clone</li>
+  <li>Defalt clone() provide shallow copy, for deep copy we have to implements manually</li>
+  <li>Subclases that do not support clone and so the code became complicated.</li>
+</ul>
+
