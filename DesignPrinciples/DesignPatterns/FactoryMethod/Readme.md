@@ -14,3 +14,6 @@
 - The creater can be a concrete class & provide default implementation in factory method. In some cases you will create some "default" object in base class.
 - we can also use the simple factory way to accepting the additional argument to close between the different object types. Sub classes the can override the factory method to selectively create the different object of same criteria.
 
+<h2> Design </h2>
+- The creater hierarchy in factory method reflect the product hierarchy, we typically ends up with a concrete creater per object type. eg: message , json, text message is creater hierarchy.
+
