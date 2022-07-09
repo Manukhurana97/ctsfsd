@@ -9,3 +9,8 @@
 <li>  Creater itself can se concrete, it provide the default object or it can be abstract.</li>
 <li>  Implementation will override the metord and return the object.</li>
 
+
+<br></br>
+- The creater can be a concrete class & provide default implementation in factory method. In some cases you will create some "default" object in base class.
+- we can also use the simple factory way to accepting the additional argument to close between the different object types. Sub classes the can override the factory method to selectively create the different object of same criteria.
+
