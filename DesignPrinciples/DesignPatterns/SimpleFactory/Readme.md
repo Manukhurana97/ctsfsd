@@ -32,3 +32,9 @@
 
 
 <h4> It can get complicated over time</h4>
+
+<br><br>
+<p>Summery</p>
+-- we encapsulate the object creation into a seperate method
+-- we can pass the argument to the method to help in the object creation.
+
