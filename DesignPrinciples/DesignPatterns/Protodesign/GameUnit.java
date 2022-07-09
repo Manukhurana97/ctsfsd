@@ -2,12 +2,27 @@ package DesignPattern;
 
 import javafx.geometry.Point3D;
 
-public abstract class GameUnit {
-    public Point3D position;
+public abstract class GameUnit implements Cloneable{
+    private Point3D position;
 
     public GameUnit() {
         position = Point3D.ZERO;
     }
+
+    // shallow copy
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        GameUnit unit =(GameUnit) super.clone();
+        unit.initialize();
+        return unit;
+    }
+
+    protected  void initialize(){
+        this.position = Point3D.ZERO;
+        reset();
+    }
+
+    protected abstract  void reset();
 
     public GameUnit(float x, float y, float z) {
         this.position = new Point3D(x, y, z);
