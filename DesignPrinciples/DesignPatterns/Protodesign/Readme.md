@@ -25,12 +25,17 @@ We state by creating a class which will be a prototype
 <li> clone us the "marker interface ", an indication that the class support cloning.</li>
 </ul>
   
+  
 <br>
 <h2> Design </h2>
 <ul>
-  Prototype arte usefull when we have large amount of object, where majority of state is unchanged b/w instances and you can easily identity the state.
+<li>Prototype arte usefull when we have large amount of object, where majority of state is unchanged b/w instances and you can easily identity the state.</li>
+<li>Prototype are usefull when working with composite and decorate patterns</li>
+</ul>
   
-  <ul>Proty type are usefull when working with composite and decorate patterns</ul>
-  </ul>
-  
-
+ 
+<br>
+<h2>Example</h2>
+<ul>
+<li>Clone method is an example of a protytype (object.clone())</li>
+</ul>
