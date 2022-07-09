@@ -14,5 +14,14 @@ We state by creating a class which will be a prototype
 
   
 ** Clone method implementation should consider the deep and shallow copy choose whichever is applicable.
+
+<br><br>
+<h2> Implementation </h2>
+<ul>
+<li> Pay attention to the deep and the shallow copy of refrences. Immutable fields on clone.</ii>
+<li> Make sure to reset the mutable state fo tthe object before returning the prototype.  it is good idea to implements this is method to allow subclass to initialize themselves</li>
+<li>clone() method is protected in Object class and must overridden to be public to be callable from outside the class</li>
+<li> clone us the "marker interface ", an indication that the class support cloning.
+</ul>
   
   
