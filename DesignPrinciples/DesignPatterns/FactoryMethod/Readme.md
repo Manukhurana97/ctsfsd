@@ -16,4 +16,7 @@
 
 <h2> Design </h2>
 - The creater hierarchy in factory method reflect the product hierarchy, we typically ends up with a concrete creater per object type. eg: message , json, text message is creater hierarchy.
+- Template design pattern uses factory design pattern
+- another design pattern called abstract design pattern uses factory design  pattern.
+
 
