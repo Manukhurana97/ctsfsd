@@ -6,10 +6,10 @@
 
 <h2> Implementation </h2>
 ** we start by studying the product "sets"
-<ul>
+<ol>
     <li>Create abstract factory as an abstract class or in interface</li>
-    <l1>Abstract factory defines abstract methods for creating products.</li>
+    <li>Abstract factory defines abstract methods for creating products.</li>
     <li>Provide concrete implementation of factory for each set of products</li>
-</ul>
+</ol>
 
 ** Abstract Factory make use of factory method pattern. you can think of abstract factory as an object with multiple factory methods.
