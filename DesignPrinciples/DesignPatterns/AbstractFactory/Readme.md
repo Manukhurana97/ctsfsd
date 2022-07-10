@@ -13,3 +13,19 @@
 </ol>
 
 ** Abstract Factory make use of factory method pattern. you can think of abstract factory as an object with multiple factory methods.
+
+
+<h2>Implementation</h2>
+<ul>
+    <li>Factory can be implemented as singletons, we typically ever need only one instance of it anyway.
+    But make sure to familiazize yourself with drawbacks of singleton.</li>
+    <li>Adding new Products type require changes to the base factory as well as all implementation of factory.</li>
+    <li>We provide the client code with concrete factory so that it can create objects.</li>
+</ul>
+
+<h2>Design Consideration</h2>
+<ul>
+       <li>When you want to constrain object creations so that they all work together then abstract factory      is good design pattern</li>
+     <li>Abstract Factory uses factory method pattern.</li>
+     <li> If object are expensive to create the you can transparently switch factory implementations to use prototype design pattern to create objects</li>
+</ui>
