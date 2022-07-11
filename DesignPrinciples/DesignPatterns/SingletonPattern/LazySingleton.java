@@ -18,7 +18,7 @@ public class LazySingleton(){
   }
   
 //   ---------------------------------------------------------------------------------------------
-// another way
+// another way LAZY init  holder
   private static class Registeryholder{
     static LazySingleton INSTANCE = new LazySingleton();
   }
