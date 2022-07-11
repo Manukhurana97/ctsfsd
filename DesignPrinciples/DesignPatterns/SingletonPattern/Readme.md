@@ -27,4 +27,9 @@
  </ul>
   
   
+  ** there are 2 ways to implements singleton pattern **
+  - Early inilialization - Eager singleton
+  -  -  Create singleton as soon as class is loaded.
+  -  Lazy inilialization - Lazy Singleton
+  -  -  singleton is created when it is first required.
     
