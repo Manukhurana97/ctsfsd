@@ -6,8 +6,7 @@
   <li> any state you add in your singleton becanme part of "global state" ofyyour application.
 </ul> 
 
-
-<br><br>
+<br>
 <h2>Implementtation</h2>
 <ul>
   <li>Controlling instance creation </li>
@@ -34,11 +33,24 @@
      -  singleton is created when it is first required.
      
      
+ <br>    
  <h2> Implementation Considerations </h2>
  <ul>
- <li> Eager/ratly initialization is simplest & preferred way, Always try to use this approach first. </li>
- <li> the classic singleton pattern implementation uses double check locking and volatile field.</li>
- <li> The lazy inilialization holder idiom provides best of bothe words , you deal with synchronization issues directly asd is easy to implement. </li>
- <li> If the sime solution works then  use it.</li>
+   <li> Eager/ratly initialization is simplest & preferred way, Always try to use this approach first. </li>
+   <li> the classic singleton pattern implementation uses double check locking and volatile field.</li>
+   <li> The lazy inilialization holder idiom provides best of bothe words , you deal with synchronization issues directly asd is easy to implement. </li>
+   <li> If the sime solution works then  use it.</li>
  </ul>
-    
+ 
+ 
+ <br>
+ <h2>Pitfall</h2>
+ <ul>
+  <li>Singleton pattern can deceive you about true dependencies! Since they are globally accessible its eays to miss dependencies.</li>
+  <li>They are hard to unit test, you cannot easily mock the inetance that is returned.</li>
+  <li>Single is implemented via static variable which is held per class loader and not per JVM. so thet are not truly singleton.</li>
+</ul>
+ 
+<br>
+<h2>Example</h2>
+- Java.lang.Runtime (private static Runtime runtime = new Runtime();)    
