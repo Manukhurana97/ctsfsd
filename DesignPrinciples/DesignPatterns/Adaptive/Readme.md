@@ -19,9 +19,19 @@
 </ul>
 
 
+<br>
 <h2>Implementation Consideration</h2>
 <ul>
 <li>How much word does depends upn the differences b/w target interface and object being adapted. if method arguments are same or different has very less work to do</li>
 <li>Using class adpater "allows" you to override some of the adaptee's behaviour. But this has to bbe avoided as you end up with adapter that differently the adaptee,</li>
 <li>Using obejct adpater allows you to potentially change the adaptee object to one of its subclasses.</li>
 </ul>
+
+
+<br>
+<h2>Design</h2>
+<ul>
+  <li>In java a "class adapter" mey not be possible if bothe target and adpatee are concerte classes. In such cases the object adapter is the only solutions, ALso since there is no private inheritance in java , it's better to stick with object adapter.</li>
+  <li> A class adapter is also called as a 2 way adpater, since it can stand in for both the target interfc e and for the adaptee. That is we can use object of adapter where either target interface is expected as well as where an adaptee object is expected</li>
+</ul>
+ 
