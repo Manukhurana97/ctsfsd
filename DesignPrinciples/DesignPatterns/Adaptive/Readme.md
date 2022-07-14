@@ -17,3 +17,11 @@
    </ul>
   <li>An object adpater should take adaptee as an argument in constructor or as a less preferred solution, you can instantiate it in the constructor this tight coupling with a specific adaptee.</li>
 </ul>
+
+
+<h2>Implementation Consideration</h2>
+<ul>
+<li>How much word does depends upn the differences b/w target interface and object being adapted. if method arguments are same or different has very less work to do</li>
+<li>Using class adpater "allows" you to override some of the adaptee's behaviour. But this has to bbe avoided as you end up with adapter that differently the adaptee,</li>
+<li>Using obejct adpater allows you to potentially change the adaptee object to one of its subclasses.</li>
+</ul>
