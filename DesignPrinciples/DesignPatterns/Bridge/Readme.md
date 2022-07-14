@@ -19,8 +19,17 @@
 </ul>
 
 
+<br>
 <h2>Implementation </h2>
 <ul>
 <li>In case we are ever going to have a single implementation the we can skip creating abstract implementor</li>
 <li>Abstraction can decide on its own whih concrete implementor to use in its constructors or we can deligate that decision to a third class. In last approach abstraction remains unaware of concrete implementators& provides greater de-coupling</li>
+</ul>
+
+
+<br>
+<h2>Design </h2>
+<ul>
+  <li>Bridge provides extenaibility by allowing us to change abstraction and implementator independently.</li>
+  <li> By using abstract factory pattern to create abstraction objects with correct implementation you can de-couple concrete implementors from abstraction.</li>
 </ul>
