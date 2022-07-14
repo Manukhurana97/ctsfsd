@@ -39,6 +39,6 @@
  <br>
 <h2>Example</h2>
 <ul>
-  <li>Input stream reader</i>
-  <i>Output Stream reader</i>
+  <li>Input stream reader</li>
+  <li>Output Stream reader</li>
 </ul>
