@@ -17,3 +17,10 @@
     <li>Then we write one or more concrete implementor providing implemention</li>
   </ul>
 </ul>
+
+
+<h2>Implementation </h2>
+<ul>
+<li>In case we are ever going to have a single implementation the we can skip creating abstract implementor</li>
+<li>Abstraction can decide on its own whih concrete implementor to use in its constructors or we can deligate that decision to a third class. In last approach abstraction remains unaware of concrete implementators& provides greater de-coupling</li>
+</ul>
