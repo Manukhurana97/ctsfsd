@@ -34,4 +34,11 @@
   <li>In java a "class adapter" mey not be possible if bothe target and adpatee are concerte classes. In such cases the object adapter is the only solutions, ALso since there is no private inheritance in java , it's better to stick with object adapter.</li>
   <li> A class adapter is also called as a 2 way adpater, since it can stand in for both the target interfc e and for the adaptee. That is we can use object of adapter where either target interface is expected as well as where an adaptee object is expected</li>
 </ul>
- 
+
+
+ <br>
+<h2>Example</h2>
+<ul>
+  <li>Input stream reader</i>
+  <i>Output Stream reader</i>
+</ul>
