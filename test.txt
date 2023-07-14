@@ -61,7 +61,15 @@
 
 
 
-thumbnailElement: HTMLElement | null = null;
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-drop-zone',
+  templateUrl: './drop-zone.component.html',
+  styleUrls: ['./drop-zone.component.css']
+})
+export class DropZoneComponent {
+  thumbnailElement: HTMLElement | null = null;
   thumbnailStyle: string | null = null;
 
   handleClick(event: Event): void {
@@ -125,3 +133,4 @@ thumbnailElement: HTMLElement | null = null;
       this.thumbnailStyle = null;
     }
   }
+}
