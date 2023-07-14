@@ -46,3 +46,82 @@
 .file-upload input[type="file"] {
     display: none;
 }
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+<div class="drop-zone" (click)="handleClick($event)" (dragover)="handleDragOver($event)"
+  (dragleave)="handleDragLeave($event)" (drop)="handleDrop($event)">
+  <span class="drop-zone__prompt" *ngIf="!thumbnailElement">Drop file here or click to upload</span>
+  <div class="drop-zone__thumb" *ngIf="thumbnailElement" [style.backgroundImage]="thumbnailStyle"></div>
+  <input type="file" name="myFile" class="drop-zone__input" (change)="handleFileChange($event)">
+</div>
+
+
+
+
+thumbnailElement: HTMLElement | null = null;
+  thumbnailStyle: string | null = null;
+
+  handleClick(event: Event): void {
+    const inputElement = event.target as HTMLInputElement;
+    inputElement.click();
+  }
+
+  handleFileChange(event: Event): void {
+    const inputElement = event.target as HTMLInputElement;
+    const file = inputElement.files?.[0];
+    if (file) {
+      this.updateThumbnail(file);
+    }
+  }
+
+  handleDragOver(event: DragEvent): void {
+    event.preventDefault();
+    const dropZoneElement = event.currentTarget as HTMLElement;
+    dropZoneElement.classList.add("drop-zone--over");
+  }
+
+  handleDragLeave(event: DragEvent): void {
+    const dropZoneElement = event.currentTarget as HTMLElement;
+    dropZoneElement.classList.remove("drop-zone--over");
+  }
+
+  handleDrop(event: DragEvent): void {
+    event.preventDefault();
+    const dropZoneElement = event.currentTarget as HTMLElement;
+    const file = event.dataTransfer?.files?.[0];
+    if (file) {
+      const inputElement = dropZoneElement.querySelector('.drop-zone__input') as HTMLInputElement;
+      inputElement.files = event.dataTransfer?.files;
+      this.updateThumbnail(file);
+    }
+    dropZoneElement.classList.remove("drop-zone--over");
+  }
+
+  updateThumbnail(file: File): void {
+    if (this.thumbnailElement) {
+      this.thumbnailElement.remove();
+      this.thumbnailElement = null;
+    }
+
+    const dropZoneElement = document.querySelector('.drop-zone') as HTMLElement;
+    if (!dropZoneElement) return;
+
+    const thumbnailElement = document.createElement("div");
+    thumbnailElement.classList.add("drop-zone__thumb");
+    thumbnailElement.dataset.label = file.name;
+    dropZoneElement.appendChild(thumbnailElement);
+    this.thumbnailElement = thumbnailElement;
+
+    if (file.type.startsWith("image/")) {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+        this.thumbnailStyle = `url('${reader.result}')`;
+      };
+    } else {
+      this.thumbnailStyle = null;
+    }
+  }
