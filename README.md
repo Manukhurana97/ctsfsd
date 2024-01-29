@@ -65,7 +65,33 @@
 	- Rest
 	- java Memory management
 
+function decodeHtmlEntitiesInString(html: string): string {
+    const element = document.createElement('div');
+    element.innerHTML = html;
 
+    const decodeTextContent = (node: Node) => {
+        if (node.nodeType === Node.TEXT_NODE) {
+            const textContent = node.textContent || '';
+            const decodedText = document.createElement('div');
+            decodedText.innerHTML = textContent;
+            node.textContent = decodedText.innerText;
+        } else if (node.nodeType === Node.ELEMENT_NODE) {
+            const childNodes = node.childNodes;
+            for (let i = 0; i < childNodes.length; i++) {
+                decodeTextContent(childNodes[i]);
+            }
+        }
+    };
+
+    decodeTextContent(element);
+    return element.innerHTML;
+}
+
+// Example usage
+const encodedHtml = '<div>This &amp; that &lt;example&gt;</div>';
+const decodedHtml = decodeHtmlEntitiesInString(encodedHtml);
+
+console.log(decodedHtml);
 
 
  
