@@ -67,4 +67,6 @@
 
 
 
+const decodedHtml = decodeURI(encodedHtml).replace(/%C2%A0/g, '&nbsp;');
+
 
