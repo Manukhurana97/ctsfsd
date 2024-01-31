@@ -67,7 +67,29 @@
 
 
 
-const decodedHtml = decodeURI(encodedHtml).replace(/%C2%A0+/g, '&nbsp;');
+import org.apache.commons.text.StringEscapeUtils;
 
+public class HtmlEncoderExample {
+    public static void main(String[] args) {
+        // Your HTML string with a mix of encoded and non-encoded characters
+        String htmlString = "This is a &quot;quoted&quot; string with &pound; and © entities.";
+
+        // Encode characters that are not already HTML entities
+        String encodedString = encodeNonHtmlEntities(htmlString);
+
+        // Print the encoded string
+        System.out.println("Encoded HTML: " + encodedString);
+    }
+
+    private static String encodeNonHtmlEntities(String input) {
+        // Encode characters that are not already HTML entities
+        String escapedString = StringEscapeUtils.escapeHtml4(input);
+
+        // Revert already encoded characters back to their original form
+        escapedString = escapedString.replaceAll("&amp;(#[0-9]+|[a-zA-Z]+);", "&$1;");
+
+        return escapedString;
+    }
+}
 
 
